@@ -804,6 +804,11 @@ static SlideNavigationController *singletonInstance;
     }
 }
 
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
+}
+
 - (NSInteger)minXForDragging
 {
 	if ([self shouldDisplayMenu:MenuRight forViewController:self.topViewController])
